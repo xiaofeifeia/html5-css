@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+</head>
+<body>
+	<script src="jquery.min.js"></script>
+  <script type="text/javascript">
+  	  var indexObj={};//标识id-->index
+  	  var newArray=[];//获取到新的数组
+  	   $.getJSON("ddd.json", function (map){
+  	   	//第一层
+  	   	digui(newArray,map.data);  
+  	   	/* for(var i=0;i<map.data.length;i++){
+                   indexObj[map.data[i].id]=1;
+         			map.data[i].index=1;
+         			newArray.push( map.data[i]);
+         			//第二层和第二层以后
+         			digui(newArray, map.data[i].list);
+  	   	        if( map.data[i].list&& map.data[i].list.length>0){
+                    for(var j=0;j<map.data[i].list.length;j++){
+                    	var obj=map.data[i].list[j];
+	         		    indexObj[obj.id]=2;
+	         			obj.index=2;
+	         			newArray.push( obj);
+	         			//第三层
+	         			digui(newArray,obj.list);
+                    }
+         		}
+  	   	 }*/
+  	   	 
+  	   });
+  	  console.log(indexObj)
+  	   console.log(newArray)
+  	 
+   function digui(newArray,array){
+   	if(!array){
+   		return;
+   	}
+          for(var i=0;i<array.length;i++){
+             		
+             	var index;
+         		if(indexObj[array[i].parentId]){
+                   index=indexObj[array[i].parentId]+1;
+         		}else{
+         			index=indexObj[array[i].comId]+1;
+         		}
+         		if(!index){
+         			index=1;
+         		}
+         		
+ 
+                indexObj[array[i].id]=index;//把父类的id的index+1
+                array[i].index=index;
+         		newArray.push( array[i]);
+         		if(array[i].list&&array[i].list.length>0){
+
+         		    digui(newArray,array[i].list);
+         		}
+         }
+   }
+
+  </script>
+</body>
+</html>

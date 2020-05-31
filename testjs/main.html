@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+</head>
+<body class="hold-transition skin-blue sidebar-mini">
+<div class="wrapper" id="rrapp" v-cloak>
+    <header class="main-header">
+        <!--<input type="file" id="file"/>-->
+        <div class="top-header clearfix">
+            <a href="javascript:void(0);" onclick="ddd()" class="logo">
+                <!--<i class="fa fa-star" ></i>-->
+                <img src="" alt="" id="logoImg">
+                <span class="logo-lg" id="logoName">
+                    双师教育云平台后台管理系统
+					<input type="file" id="file"/>
+                </span>
+            </a>
+    </div>
+
+</div>
+<!-- ./wrapper -->
+
+<script src="jquery.min.js"></script>
+<script>
+var res={
+	"code": 0,
+	"data": {
+		"eleBoxMinDataMap": {
+			"用电监测仪2": [{
+				"devId": "ba84b37d80554bedb7dda2bbd5cadc12",
+				"realTime": "2018-08-17 17:01",
+				"envTemp": 34.0,
+				"leakEleCurrent": 332.0,
+				"cabTemp": 34.0,
+				"warnType": 0,
+				"devName": "用电监测仪2"
+			}, {
+				"devId": "ba84b37d80554bedb7dda2bbd5cadc12",
+				"realTime": "2018-08-17 17:03",
+				"envTemp": 34.0,
+				"leakEleCurrent": 0.0,
+				"cabTemp": 34.0,
+				"warnType": 0,
+				"devName": "用电监测仪2"
+			}, {
+				"devId": "ba84b37d80554bedb7dda2bbd5cadc12",
+				"realTime": "2018-08-17 17:04",
+				"envTemp": 34.0,
+				"leakEleCurrent": 228.0,
+				"cabTemp": 34.0,
+				"warnType": 0,
+				"devName": "用电监测仪2"
+			}, {
+				"devId": "ba84b37d80554bedb7dda2bbd5cadc12",
+				"realTime": "2018-08-17 17:05",
+				"envTemp": 34.0,
+				"leakEleCurrent": 221.0,
+				"cabTemp": 34.0,
+				"warnType": 0,
+				"devName": "用电监测仪2"
+			}, {
+				"devId": "ba84b37d80554bedb7dda2bbd5cadc12",
+				"realTime": "2018-08-17 17:06",
+				"envTemp": 34.0,
+				"leakEleCurrent": 0.0,
+				"cabTemp": 34.0,
+				"warnType": 0,
+				"devName": "用电监测仪2"
+			}],
+			"用电监测仪1": [{
+				"devId": "ba84b37d80554bedb7dda2bbd5cadc11",
+				"realTime": "2018-08-17 17:02",
+				"envTemp": 31.0,
+				"leakEleCurrent": 673.0,
+				"cabTemp": 31.0,
+				"warnType": 0,
+				"devName": "用电监测仪1"
+			}, {
+				"devId": "ba84b37d80554bedb7dda2bbd5cadc11",
+				"realTime": "2018-08-17 17:03",
+				"envTemp": 31.0,
+				"leakEleCurrent": 200.0,
+				"cabTemp": 31.0,
+				"warnType": 0,
+				"devName": "用电监测仪1"
+			}, {
+				"devId": "ba84b37d80554bedb7dda2bbd5cadc11",
+				"realTime": "2018-08-17 17:04",
+				"envTemp": 31.0,
+				"leakEleCurrent": 396.0,
+				"cabTemp": 31.0,
+				"warnType": 0,
+				"devName": "用电监测仪1"
+			}, {
+				"devId": "ba84b37d80554bedb7dda2bbd5cadc11",
+				"realTime": "2018-08-17 17:05",
+				"envTemp": 31.0,
+				"leakEleCurrent": 589.0,
+				"cabTemp": 31.0,
+				"warnType": 0,
+				"devName": "用电监测仪1"
+			}, {
+				"devId": "ba84b37d80554bedb7dda2bbd5cadc11",
+				"realTime": "2018-08-17 17:06",
+				"envTemp": 31.0,
+				"leakEleCurrent": 563.0,
+				"cabTemp": 31.0,
+				"warnType": 0,
+				"devName": "用电监测仪1"
+			}, {
+				"devId": "ba84b37d80554bedb7dda2bbd5cadc11",
+				"realTime": "2018-08-17 17:07",
+				"envTemp": 31.0,
+				"leakEleCurrent": 387.0,
+				"cabTemp": 31.0,
+				"warnType": 0,
+				"devName": "用电监测仪1"
+			}, {
+				"devId": "ba84b37d80554bedb7dda2bbd5cadc11",
+				"realTime": "2018-12-14 15:30",
+				"envTemp": 31.0,
+				"leakEleCurrent": 604.0,
+				"cabTemp": 31.0,
+				"warnType": 0,
+				"devName": "用电监测仪1"
+			}]
+		}
+	}
+}
+
+
+
+
+var series=createSeries("cabTemp");
+console.log(series);
+function createSeries(param){
+   var series=[];
+   var nowTime=new Date().getTime();
+    for(var key in res.data.eleBoxMinDataMap){
+		var obj={name:key};
+		var obj_data=[];
+		var arr=res.data.eleBoxMinDataMap[key];
+		if(arr && arr.length>0){
+		  for(var i=0;i<arr.length;i++){
+			 var realTime=new Date(arr[i].realTime+":00").getTime();
+			 if(check7Min(realTime,nowTime)){
+				if(obj_data.length<7){
+				 obj_data.push(arr[i][param]);
+			   }
+			 }
+		  }
+		}
+		if(obj_data.length<7){
+		   var len=7-obj_data.length;
+			for(var j=0;j<len;j++){
+			  obj_data.push(0);
+			}
+		}
+		obj.data=obj_data;
+		series.push(obj);
+	}
+	return series;
+}
+
+
+function check7Min(time,nowTime){
+   return (nowTime-time)<420000;//42000表示7分钟
+}
+
+function ddd222ss(){
+
+          $.ajax({
+                type: 'POST',
+                url: 'http://192.168.1.11:20101/ability/offlineasr',
+                xhrFields: {withCredentials: true},
+                data: JSON.stringify([{
+                    "jsonrpc": "2.0",
+				    "method": "deal_request",
+				    "params": {
+						"cmd": "auw",
+						"type": "2",
+						"sid": "4d5660000000",
+						"audioStatus": 1,
+						"data": "base64编码的音频数据"
+				     },
+				  "id": 1
+                }]),
+                success: function(res){
+                    console.log(res);
+                },
+                dataType: "json",
+                contentType: "application/json-rpc",
+                error: function(){}
+            });
+}
+   function dddfdsfsfsfs() {
+        $.ajax({
+			type: 'POST',
+			url: 'http://localhost:9527/znzj/analyzer-service/qualityAssurance/task/a/createOrUpdateFlowManualScore.do',
+			data:  {     dialogId:"06a5fc63-5514-4a8c-bf71-22724fbcf498",
+						 token:"02755a24532dba6413555ad3d2737be38a9a72517233270ece0a17506c499041b9fd2c211b1e0b8008509d055645379d69a873f6b10e161c375cae5ea9f1fa025d339616284f514e116c43200eaa3a28ec6a60ea5ff9cacb406f92db498ef3e3022f3fe78800aebe5a83f64af4c331d6",
+						 manualScoreIds:JSON.stringify([1,4,6])
+				 },
+            success: function (res) {
+                console.log(res);
+            }
+        });
+    }
+	function dddeeeee() {
+        $.ajax({
+			type: 'POST',
+			url: 'http://localhost:9527/znzj/statistics-service/statistics/a/createOrUpdateExcludeWord.do',
+			data:  {     
+						 token:"02755a24532dba6413555ad3d2737be38a9a72517233270ece0a17506c499041b9fd2c211b1e0b8008509d055645379d69a873f6b10e161c375cae5ea9f1fa02706383f65a97db1bfb01149d30f159847eaf69d9809c9cb60366e81c8c609ab1a11a95e1e7971cb9e64d983f01f728fa",
+						 excludeWords:JSON.stringify(["渐渐地","小屁孩","分解机"])
+				 },
+            success: function (res) {
+                console.log(res);
+            }
+        });
+    }
+	
+   function ddfffd() {
+        $.ajax({
+			type: 'POST',
+			url: 'http://localhost:9527/znzj/analyzer-service/qualityAssurance/task/a/createTask.do',
+			data:  {     taskName:"小妖精",
+		                 description:"不可以介绍了",
+						 excelPath:"/home/admin/znzj_file/16e3f4ed2dee4bd9b773980e9587e7b8/flow_template.xls",
+						 token:"02755a24532dba6413555ad3d2737be38a9a72517233270ece0a17506c499041b9fd2c211b1e0b8008509d055645379d69a873f6b10e161cadd48c002116852717b5675e239a2ec3a80108d212f10a891a71acf1a51cf83932c44ba3eb4d03f09a89bceb22653d69f3b9899097e1f326",
+						 viocePaths:JSON.stringify(["/home/admin/znzj_file/de7da027f0f64e27be2c46e9133bd993/333-222.wav"]),
+						 textAnalyzerIds:JSON.stringify(["dfytyf"]),
+						 hasTextAnalyzer:true,
+						 hasTopicAnalyzer:true,
+						 hasPatternAnalyzer:true,
+						 hasSensitiveAnalyzer:true
+				 },
+            success: function (res) {
+                console.log(res);
+            }
+        });
+    }
+	//上传文件
+	 function ddd() {
+        var formData = new FormData();
+        formData.append("file", $('#file')[0].files[0]);
+        formData.append("token", "02755a24532dba647abc92414cf8e59743b30e3ac6f3e66bf19c7045009f9b50e6dd22e8a240a0d83b320925188b3ed90893aee677c972798a8e8ad20e65995056e3cba3c85a5e3a18ce09265d1f33dac0bcc9a84e97a0a4f670684d7d6b8482fdd9d0999a8c179c7f7b5bdbfb4d22fc3e301ac600bd78a0");
+        $.ajax({
+            url: 'http://localhost:9527/znzj/analyzer-service/upload.do',
+            type: 'POST',
+            data: formData,
+            cache: false,
+            processData: false,
+            contentType: false,
+            success: function (res) {
+                console.log(res);
+            }
+        });
+    }
+
+    function ddddddd() {
+        $.ajax({
+			type: 'POST',
+			url: 'http://localhost:9527/znzj/analyzer-service/analyzer/sensitive/a/list.do',
+			data:  {     id:"1c2fd68d-f415-4d99-8a55-384cde6f508c",
+						 token:"02755a24532dba6413555ad3d2737be38a9a72517233270ece0a17506c499041b9fd2c211b1e0b8008509d055645379d69a873f6b10e161c732fd7375932778c90f367212198468f86c8f93847b46a27b8ad61fbe8b48b4120d7fefc3c8f8866c1cedbdc1f28c90ae807ae262e6a3029",
+						 name:"背包2",
+						 sameWords: JSON.stringify(["敏感词1","敏感词2","dsfs"])
+				 },
+            success: function (res) {
+                console.log(res);
+            }
+        });
+    }
+
+    function dddsssff() {
+        $.ajax({
+            url: 'http://localhost:8060/newl/sys/evaluate/createClassEvaluate',
+            type: 'POST',
+            data: {
+                classId: 66,
+                evaluateJobId: 1,
+                contentJson: JSON.stringify(contentJson)
+            },
+            success: function (res) {
+                console.log(res);
+            }
+        });
+    }
+
+    function ddd000() {
+        $.ajax({
+            url: 'http://localhost:8060/newl/sys/basic/saveOrUpdate',
+            type: 'POST',
+            data: {
+                schoolName: '小萝莉',
+                shortName: '到底',
+                systemName: '小花猫',
+                webName: '讲讲价',
+                gradePoint: '09-01 00:00:00'
+
+            },
+            success: function (res) {
+                console.log(res);
+            }
+        });
+    }
+
+    function ddd666() {
+        var formData = new FormData();
+        formData.append("platformLogo", $('#file')[0].files[0]);
+        $.ajax({
+            url: 'http://localhost:8060/newl/sys/basic/uploadPlatformLogo',
+            type: 'POST',
+            data: formData,
+            cache: false,
+            processData: false,
+            contentType: false,
+            success: function (res) {
+                console.log(res);
+            }
+        });
+    }
+
+    function ddd555() {
+        $.ajax({
+            url: 'http://localhost:8060/newl/sys/evaluate/createClassEvaluate',
+            type: 'POST',
+            data: {
+                classId: 77,
+                evaluateJobId: 1,
+                contentJson: JSON.stringify(contentJson)
+            },
+            success: function (res) {
+                console.log(res);
+            }
+        });
+    }
+
+    function ddd333() {
+        var formData = new FormData();
+        formData.append("bannerId", 58);
+        formData.append("title", "笑嘻到地方");
+        formData.append("href", "http://www.baidu.com");
+        formData.append("img", $('#file')[0].files[0]);
+        $.ajax({
+            url: 'http://localhost:8060/newl/platform/banner/update',
+            type: 'POST',
+            data: formData,
+            cache: false,
+            processData: false,
+            contentType: false,
+            success: function (res) {
+                console.log(res);
+            }
+        });
+    }
+
+    function ddd2() {
+        $.ajax({
+            url: 'http://localhost:8060/newl/sys/evaluate/updateEvaluate',
+            type: 'POST',
+            data: {
+                name: '小语法',
+                "id": 10,
+                type: 2,
+                evaluateContentJson: JSON.stringify(json)
+            },
+            success: function (res) {
+                console.log(res);
+            }
+        });
+    }
+</script>
+</body>
+</html>

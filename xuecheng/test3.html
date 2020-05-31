@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    .ratation {
+
+        width: 520px;
+        height: 280px;
+        margin: 300px auto;
+        background-color: pink;
+        position: relative;
+    }
+
+    .ratation img {
+        width: 520px;
+        height: 280px;
+    }
+
+    .prev,
+    .next {
+        width: 20px;
+        height: 30px;
+        background-color: rgba(0, 0, 0, 0.3);
+        position: absolute;
+        top: 50%;
+        margin-top: -15px;
+        text-decoration: none;
+        color: white;
+        text-align: center;
+        line-height: 30px;
+
+    }
+
+    .prev {
+        left: 0;
+        border-top-right-radius: 15px;
+        border-bottom-right-radius: 15px;
+    }
+
+    .next {
+        right: 0;
+        border-top-left-radius: 15px;
+        border-bottom-left-radius: 15px;
+    }
+
+    .nav {
+        height: 15px;
+        width: 72px;
+        position: absolute;
+        left: 50%;
+        bottom: 10px;
+        margin-left: -36px;
+        background-color: rgba(255, 255, 255, 0.3);
+        border-radius: 15px;
+    }
+
+    .nav li {
+        list-style: none;
+        height: 10px;
+        width: 10px;
+        float: left;
+        background-color: white;
+        border-radius: 5px;
+        margin: 2px;
+
+    }
+
+    ul li.cur {
+        background-color: red;
+    }
+</style>
+
+<body>
+    <div class="ratation">
+        <img src="./images/111.jpg" alt="">
+        <a href="#" class="prev">&lt;</a>
+        <a href="#" class="next">&gt;</a>
+
+        <ul class="nav">
+            <li class="cur"></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+    </div>
+</body>
+
+</html>

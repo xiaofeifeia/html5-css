@@ -1,0 +1,46 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+</head>
+<body>
+	<script src="jquery.min.js"></script>
+  <script type="text/javascript">
+
+  	   function treeDataRewrite(array){
+  	  	if(!array||array.length==0){
+  	  		return;
+  	  	}
+  	  	for(var i=0;i<array.length;i++){
+          var name=array[i].nameTree||array[i].procedureName;
+          var open=true;
+          if(array[i].procedureName){
+              open=false;
+          }
+          array[i].name=name;
+          array[i].open=open;
+  	  		array[i].checked=true;
+          if(array[i].list&&array[i].list.length>0){
+            array[i].children=array[i].list;
+          }
+          //删除除了id,name,open,children之外其他key
+          for(var key in array[i]){
+            if(key !=='id' && key!=='name' && key !=='open' && key!=='children' && key!=='checked'){
+              delete array[i][key];
+            }
+          }
+          if(array[i].children&&array[i].children.length>0){
+
+             treeDataRewrite(array[i].children);
+          }
+  	  	}
+  	  }
+
+  	  $.getJSON("json3.json", function (map){
+        var data=map.data;
+         treeDataRewrite(map.data);
+         console.log(data);
+       });
+  </script>
+</body>
+</html>

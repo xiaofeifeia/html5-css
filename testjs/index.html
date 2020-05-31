@@ -1,0 +1,145 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>多行滚动jQuery循环新闻列表代码</title>
+<style type="text/css">
+ul,li{margin:0;padding:0}
+#scrollDiv{width:1000px;height:100px;min-height:25px;line-height:25px;border:#ccc 1px solid;overflow:hidden}
+#scrollDiv li{height:25px;padding-left:10px;}
+#scrollDiv2{width:1000px;height:100px;min-height:25px;line-height:25px;border:#ccc 1px solid;overflow:hidden}
+#scrollDiv2 li{height:25px;padding-left:10px;}
+</style>
+
+</head>
+
+<body>
+<p>多行滚动演示：</p>
+<div id="scrollDiv">
+<ul id="uu"></ul>
+</div>
+
+<!-- <div id="scrollDiv2">
+<ul id="uu2"></ul>
+</div> -->
+
+<script src="./js/jquery-2.0.0.min.js" type="text/javascript"></script>
+<script type="text/javascript">
+//滚动插件
+$(function(){
+
+function scrollUp(id,line,upHeight,speed){
+	
+                        $(id).animate({
+                                marginTop:upHeight
+                        },speed,function(){
+                                for(i=1;i<=line;i++){
+                                    if($(this).find("li:first").attr("type")==='new'){
+                                    	$(this).find("li:first").appendTo(this);
+                                    }else{
+                                    	$(this).find("li:first").remove();
+                                    }
+                                    
+                                }
+                                $(this).css({marginTop:0});
+                        });
+                }      
+
+        function Scroll(that,opt){
+
+                //参数初始化
+                if(!opt) var opt={};
+
+                var _this=$(that).eq(0).find("ul:first");
+                var   lineH=_this.find("li:first").height(), //获取行高
+                        line=opt.line?parseInt(opt.line,10):parseInt($(that).height()/lineH,10), 
+                  //每次滚动的行数，默认为一屏，即父容器高度
+                        speed=opt.speed?parseInt(opt.speed,10):500, //卷动速度，数值越大，速度越慢（毫秒）
+                        timer=opt.timer?parseInt(opt.timer,10):3000; //滚动的时间间隔（毫秒）
+                if(line==0) line=1;
+                var upHeight=0-line*lineH;
+               
+                //鼠标事件绑定
+                 timerID=setInterval(function(){
+							scrollUp(_this,line,upHeight,speed);
+						},timer);
+        }  
+
+
+
+       // $("#scrollDiv").Scroll({line:1,speed:500,timer:3000});
+
+var res={"code":0,"data":{"meetingAddress":"001","isSealed":"0","meetingBeginTime":"2019-03-07 16:48:53","userList":[{"departmentName":"软件","replaceUserName":"name1","companyName":"鹏建互联","userPhone":"18820245679","signStatus":"1","userPosition":"开发","replaceType":"1","id":"46aeb59d6f57446c9fe946fb2e67c303","userName":"t2"},{"departmentName":"研发部","companyName":"鹏建互联","userPhone":"13828732896","signStatus":"0","userPosition":"工程师","replaceType":"0","id":"ceb9d143f3714d20bf2ae56bc846e331","userName":"谢总"},{"departmentName":"test3","companyName":"test3","userPhone":"13612341234","signStatus":"0","userPosition":"test3","replaceType":"0","id":"ce510120d7bf495c8aa720a39a46265d","userName":"test3"},{"departmentName":"哈哈哈","signTime":"2019-03-09 16:22:08","companyName":"鹏城互联","userPhone":"15014009532","signStatus":"1","userPosition":"哈哈哈","replaceType":"0","id":"2b83e056d2884f4db1a7853fca7d19d6","userName":"王云"},{"departmentName":"22233","companyName":"22233","userPhone":"14567890985","signStatus":"0","userPosition":"22233","replaceType":"0","id":"f6eac520af4749f9b7cd9c75d5a23ad8","userName":"3"},{"departmentName":"研发部","signTime":"2019-03-09 16:27:07","companyName":"鹏城建筑集团","userPhone":"13429866597","signStatus":"1","userPosition":"前端","replaceType":"0","id":"61bf14f0b30c4280a521e4320fc66875","userName":"龚帅达"},{"departmentName":"研发部","companyName":"鹏建互联科技股份有限公司","userPhone":"13620245684","signStatus":"0","userPosition":"开发java工程师","replaceType":"0","id":"a0172385da48422892e5c286c174e96f","userName":"s7"},{"departmentName":"材料部","companyName":"胜捷消防","userPhone":"15645781236","signStatus":"0","userPosition":"开发java工程师","replaceType":"0","id":"5e217b0ab37347f8bcc51167cd702575","userName":"name4"},{"departmentName":"软件","companyName":"鹏建互联","userPhone":"18820245687","signStatus":"0","userPosition":"开发","replaceType":"0","id":"50ce4de45c8d4e1d9c8c6f84650bd3ee","userName":"t10"}],"meetingConveneUserId":"2","updateUserId":"2","tenantId":"1","meetingContent":"2月份工作总结及三月份工作部署","meetingTitle":"鹏城集团2019年3月工程例会","updateTime":"2019-03-11 09:09:04","id":"24724607d8fd4c24bf3be1ddc95c42e5","meetingEndTime":"2019-03-16 16:48:58"},"msg":"操作成功"};
+var oldDataLength=0;
+var lineNum=1;
+var idArr=[];
+for(var i=0;i<res.data.userList.length;i++){
+	idArr.push(res.data.userList[i].id);
+   }
+   console.log(idArr);
+function calcLiNum(lineNum,datalist){
+  var totalLine= parseInt(datalist.length/lineNum);
+  if(datalist.length%lineNum>0){
+  	totalLine=totalLine+1;
+  }
+  return totalLine;
+  
+}
+var firstBool=true;
+  var timeId=setInterval(function(){
+  	if(!firstBool){
+  		clearInterval(timerID);
+  		$("#uu li").each(function(){
+  			$(this).attr("type","old");
+  		});
+  		var arr=[{"departmentName":"软件ss","replaceUserName":"name1","companyName":"鹏建互联","userPhone":"18820245679","signStatus":"1","userPosition":"开发ss","replaceType":"1","id":"46aeb59d6f57446c9fe946fb2e67c303","userName":"t2"},{"departmentName":"研发部","companyName":"鹏建互联科技股份有限公司","userPhone":"13620245688","signStatus":"0","userPosition":"开发java工程师","replaceType":"0","id":"597f7bbc57ef426b8edc85487b151d75","userName":"s11"},{"departmentName":"2","companyName":"222","userPhone":"14444444444","signStatus":"0","userPosition":"2","replaceType":"0","id":"d7bde24e675642a2a8a5f40316e15acb","userName":"2"},{"departmentName":"测试部","signTime":"2019-03-11 14:15:15","replaceUserName":"t6","companyName":"鹏建互联","userPhone":"15818793174","signStatus":"1","userPosition":"工程师","replaceType":"2","id":"f415b53b1a9b4bd99824f50f39c85fad","userName":"minchangen"},{"departmentName":"研发部","companyName":"鹏建互联","userPhone":"13828732896","signStatus":"0","userPosition":"工程师","replaceType":"0","id":"ceb9d143f3714d20bf2ae56bc846e331","userName":"谢总"},{"departmentName":"test3","companyName":"test3","userPhone":"13612341234","signStatus":"0","userPosition":"test3","replaceType":"0","id":"ce510120d7bf495c8aa720a39a46265d","userName":"test3"},{"departmentName":"哈哈哈","signTime":"2019-03-09 16:22:08","companyName":"鹏城互联","userPhone":"15014009532","signStatus":"1","userPosition":"哈哈哈","replaceType":"0","id":"2b83e056d2884f4db1a7853fca7d19d6","userName":"王云"},{"departmentName":"22233","companyName":"22233","userPhone":"14567890985","signStatus":"0","userPosition":"22233","replaceType":"0","id":"f6eac520af4749f9b7cd9c75d5a23ad8","userName":"3"},{"departmentName":"研发部","signTime":"2019-03-09 16:27:07","companyName":"鹏城建筑集团","userPhone":"13429866597","signStatus":"1","userPosition":"前端","replaceType":"0","id":"61bf14f0b30c4280a521e4320fc66875","userName":"龚帅达"},{"departmentName":"研发部","companyName":"鹏建互联科技股份有限公司","userPhone":"13620245684","signStatus":"0","userPosition":"开发java工程师","replaceType":"0","id":"a0172385da48422892e5c286c174e96f","userName":"s7"},{"departmentName":"材料部","companyName":"胜捷消防","userPhone":"15645781236","signStatus":"0","userPosition":"开发java工程师","replaceType":"0","id":"5e217b0ab37347f8bcc51167cd702575","userName":"name4"},{"departmentName":"软件","companyName":"鹏建互联","userPhone":"18820245687","signStatus":"0","userPosition":"开发","replaceType":"0","id":"50ce4de45c8d4e1d9c8c6f84650bd3ee","userName":"t10"}];
+  		for(var j=0;j<arr.length;j++){
+  			//console.log(idArr.indexOf(arr[j].id));
+  			/*if(idArr.indexOf(arr[j].id)!=-1){
+                   res.data.userList[idArr.indexOf(arr[j].id)]=arr[j];
+  			}else{
+  				idArr.push(arr[j].id)
+  				res.data.userList.push(arr[j]);
+  			}*/
+  			res.data.userList.push(arr[j]);
+  		}
+  	//	console.log(res.data.userList)
+  		//res.data.userList=[];
+  		
+  		
+  	}else{
+  		oldDataLength=res.data.userList.length;
+  	}
+
+
+
+  	var line=calcLiNum(lineNum,res.data.userList);
+  	
+	for(var i=0;i<line;i++){
+		var html="<li type='new'>";
+	  for(var j=0;j<lineNum;j++){
+	  	
+	  	var index=i*lineNum+j;
+	  	if(index<=res.data.userList.length-1){
+	  		//console.log(index);
+	  		var user=res.data.userList[index];
+	       html+="<span>"+user.userName+","+user.departmentName+"  </span>";
+	  	}
+	  	
+	  }
+	  html+="</li>";
+	  console.log("---------")
+	 $("#uu").append(html);
+	}
+	 
+		Scroll($("#scrollDiv"),{line:1,speed:500,timer:3000});
+  	  
+  	  firstBool=false;
+  },5000);
+
+
+});
+
+</script>
+</body>
+</html>

@@ -1,0 +1,252 @@
+{
+	"code": 0,
+	"data": [{
+		"name": "鹏城建筑",
+		"id": "2a0f691035fb440587251136d5cbe61b",
+		"idTree": "2a0f691035fb440587251136d5cbe61b",
+		"list": [{
+			"name": "万科香蜜府（JZ106）",
+			"id": "d72f89441840418eba4c621351621e26",
+			"idTree": "2a0f691035fb440587251136d5cbe61b>d72f89441840418eba4c621351621e26",
+			"list": [{
+				"projectStatus": "0",
+				"startBuildTime": "2018-01-26 14:17:02",
+				"periodName": "万科香蜜府",
+				"id": "39cf68e12fc248fab6c623da89a79ff6",
+				"comId": "d72f89441840418eba4c621351621e26",
+				"projectId": "d41caf1acca04c869a7263a60e18822e"
+			}],
+			"parentId": "2a0f691035fb440587251136d5cbe61b"
+		}],
+		"parentId": ""
+	}, {
+		"name": "中天集团",
+		"id": "6d98a28ba0a44fb8aae912b01e4aed5a",
+		"idTree": "6d98a28ba0a44fb8aae912b01e4aed5a",
+		"list": [{
+			"projectStatus": "0",
+			"startBuildTime": "2018-11-08 15:42:28",
+			"periodName": "测试项目一期",
+			"id": "d330d60e52a94af98fce986b256392e7",
+			"comId": "6d98a28ba0a44fb8aae912b01e4aed5a",
+			"projectId": "cd0b5b2299c9477ca56fd4c825763f0f"
+		}, {
+			"projectStatus": "0",
+			"startBuildTime": "2018-08-31 15:56:56",
+			"periodName": "新竹园",
+			"id": "d6d25e41e4404d63bdc883eb872ba506",
+			"comId": "6d98a28ba0a44fb8aae912b01e4aed5a",
+			"projectId": "28dddbe8f7214bd882e54566f313a03f"
+		}, {
+			"projectStatus": "0",
+			"startBuildTime": "2018-04-16 16:06:18",
+			"periodName": "中天花园二期",
+			"id": "2184d9e45c314855a65de9bf1e3ede5d",
+			"comId": "6d98a28ba0a44fb8aae912b01e4aed5a",
+			"projectId": "f819db36a9544023997fe2e389efdbbf"
+		}],
+		"parentId": ""
+	}, {
+		"name": "鹏城建筑",
+		"id": "9b63f3f3b5194e9da974c516cbdfd2f6",
+		"idTree": "9b63f3f3b5194e9da974c516cbdfd2f6",
+		"list": [{
+			"projectStatus": "0",
+			"startBuildTime": "2018-09-13 16:42:25",
+			"periodName": "万科项目",
+			"id": "5dbffb3646f744eeb5dac6a23e57ed45",
+			"comId": "9b63f3f3b5194e9da974c516cbdfd2f6",
+			"projectId": "28b8ff0bfcb6432490d32aadeaf55a7c"
+		}],
+		"parentId": ""
+	}, {
+		"name": "鹏城建筑",
+		"id": "cacb6fb407c044818ef14097e833727e",
+		"idTree": "cacb6fb407c044818ef14097e833727e",
+		"list": [{
+			"projectStatus": "0",
+			"startBuildTime": "2018-07-13 09:17:56",
+			"periodName": "肇庆新城和昱项目",
+			"id": "522d14e7d1cf403f8b0e5dfe5d6b6a93",
+			"comId": "cacb6fb407c044818ef14097e833727e",
+			"projectId": "d9afbbf646e3492a91b27bd759fdb4ae"
+		}, {
+			"projectStatus": "0",
+			"startBuildTime": "2017-07-12 10:26:27",
+			"periodName": "南山智园",
+			"id": "03b1cd74577c4fee96a7b9628b19513b",
+			"comId": "cacb6fb407c044818ef14097e833727e",
+			"projectId": "31804dec32c943e99cd59ad4f3ae8fe2"
+		}, {
+			"name": "粤北区域",
+			"id": "2c74428d632c4743bf9f839cf065284c",
+			"idTree": "cacb6fb407c044818ef14097e833727e>2c74428d632c4743bf9f839cf065284c",
+			"list": [{
+				"projectStatus": "0",
+				"startBuildTime": "2017-12-20 14:27:07",
+				"periodName": "演示项目一期",
+				"id": "b2baa6a1e4db49cea13fc1d1d984b9da",
+				"comId": "2c74428d632c4743bf9f839cf065284c",
+				"projectId": "4ccd4af6b025408a914a9d683d9c033e"
+			}, {
+				"projectStatus": "0",
+				"startBuildTime": "2017-05-12 11:20:39",
+				"periodName": "翠景花园二期",
+				"id": "5b6bcf593f2348cb8074a39ef9ee6d2c",
+				"comId": "2c74428d632c4743bf9f839cf065284c",
+				"projectId": "de6c9d5cc71640a5ac28e4133aacfb58"
+			}, {
+				"projectStatus": "0",
+				"startBuildTime": "2017-05-12 11:20:34",
+				"periodName": "翠景花园一期",
+				"id": "381fa21ef7cb42f083e638236acc88cc",
+				"comId": "2c74428d632c4743bf9f839cf065284c",
+				"projectId": "de6c9d5cc71640a5ac28e4133aacfb58"
+			}, {
+				"name": "技术部",
+				"id": "c8a0282aeef44bb5b69f10b1dcb891e0",
+				"idTree": "cacb6fb407c044818ef14097e833727e>2c74428d632c4743bf9f839cf065284c>c8a0282aeef44bb5b69f10b1dcb891e0",
+				"list": [{
+					"projectStatus": "0",
+					"startBuildTime": "2018-01-31 14:46:04",
+					"periodName": "大鹏鹏安苑保障房项目",
+					"id": "b8b9092b6aef4cdba5a1500d2c6c4a8d",
+					"comId": "c8a0282aeef44bb5b69f10b1dcb891e0",
+					"projectId": "707e1ba817ce4b82a85ec34f17e648f9"
+				}],
+				"parentId": "2c74428d632c4743bf9f839cf065284c"
+			}],
+			"parentId": "cacb6fb407c044818ef14097e833727e"
+		}, {
+			"name": "安托山小学",
+			"id": "2e4bb7d51d73428895749f47f760be7e",
+			"idTree": "cacb6fb407c044818ef14097e833727e>2e4bb7d51d73428895749f47f760be7e",
+			"list": [{
+				"projectStatus": "0",
+				"startBuildTime": "2018-06-14 17:00:17",
+				"periodName": "安托山小学",
+				"id": "2991d29a340a4496b69f37536ac4f62b",
+				"comId": "2e4bb7d51d73428895749f47f760be7e",
+				"projectId": "910bb3b2c9704c08ae74c0e93828e124"
+			}],
+			"parentId": "cacb6fb407c044818ef14097e833727e"
+		}, {
+			"name": "深莞惠区域",
+			"id": "2ebba81fba924085b2f8de7c4ada4b49",
+			"idTree": "cacb6fb407c044818ef14097e833727e>2ebba81fba924085b2f8de7c4ada4b49",
+			"list": [{
+				"projectStatus": "0",
+				"startBuildTime": "2018-12-21 18:43:25",
+				"periodName": "金域花园一期",
+				"id": "a8a2280ca2e74581ac27c87dc2ce955e",
+				"comId": "2ebba81fba924085b2f8de7c4ada4b49",
+				"projectId": "0230c04561084d3baec03cfb8bf0ee30"
+			}, {
+				"projectStatus": "0",
+				"startBuildTime": "2018-08-31 17:42:00",
+				"periodName": "安托山花园一期",
+				"id": "f3467010f06943d385481263fde84f77",
+				"comId": "2ebba81fba924085b2f8de7c4ada4b49",
+				"projectId": "f540040aa9d643fb9aefcdd90d4c1190"
+			}, {
+				"projectStatus": "0",
+				"startBuildTime": "2017-09-05 11:33:16",
+				"periodName": "龙光玖龙台一期",
+				"id": "9d06c94c4514465e9f26cd17f4b798a8",
+				"comId": "2ebba81fba924085b2f8de7c4ada4b49",
+				"projectId": "6f27433b6caa41249603f367424ed507"
+			}, {
+				"projectStatus": "0",
+				"startBuildTime": "2017-08-07 15:30:56",
+				"periodName": "安托山花园二期",
+				"id": "f0df62835ff34e8188c60da2877c6a06",
+				"comId": "2ebba81fba924085b2f8de7c4ada4b49",
+				"projectId": "f540040aa9d643fb9aefcdd90d4c1190"
+			}, {
+				"projectStatus": "1",
+				"startBuildTime": "2017-08-07 15:18:49",
+				"periodName": "安托山北地块",
+				"id": "bf9fffef9dad4e2aacbafe20b8c7dda7",
+				"comId": "2ebba81fba924085b2f8de7c4ada4b49",
+				"projectId": "f540040aa9d643fb9aefcdd90d4c1190"
+			}],
+			"parentId": "cacb6fb407c044818ef14097e833727e"
+		}, {
+			"name": "西北区域",
+			"id": "c5063df648e94c7d91e7668c7c6f538c",
+			"idTree": "cacb6fb407c044818ef14097e833727e>c5063df648e94c7d91e7668c7c6f538c",
+			"list": [{
+				"projectStatus": "0",
+				"startBuildTime": "2017-08-15 09:15:43",
+				"periodName": "中信红树湾三期",
+				"id": "10fc6cf1c451440096ee57587a857f85",
+				"comId": "c5063df648e94c7d91e7668c7c6f538c",
+				"projectId": "e1faf81d5b1846f9917a0b1892cc08e0"
+			}, {
+				"projectStatus": "0",
+				"startBuildTime": "2017-12-27 11:29:08",
+				"periodName": "中信红树湾二期",
+				"id": "9989ddbbd3b34149b902fa39c7dedee6",
+				"comId": "c5063df648e94c7d91e7668c7c6f538c",
+				"projectId": "e1faf81d5b1846f9917a0b1892cc08e0"
+			}, {
+				"projectStatus": "0",
+				"startBuildTime": "2017-12-27 11:28:56",
+				"periodName": "中信红树湾一期",
+				"id": "b116d11648c44a5cbea973bc01357b0f",
+				"comId": "c5063df648e94c7d91e7668c7c6f538c",
+				"projectId": "e1faf81d5b1846f9917a0b1892cc08e0"
+			}, {
+				"projectStatus": "0",
+				"startBuildTime": "2017-12-20 17:29:51",
+				"periodName": "中信花园四期",
+				"id": "5ec9fcc115064c2cb574642cf108e4fa",
+				"comId": "c5063df648e94c7d91e7668c7c6f538c",
+				"projectId": "e1faf81d5b1846f9917a0b1892cc08e0"
+			}, {
+				"projectStatus": "0",
+				"startBuildTime": "2017-08-15 10:41:52",
+				"periodName": "安托山4期",
+				"id": "1645b38c32014c6a919805cf2d01d494",
+				"comId": "c5063df648e94c7d91e7668c7c6f538c",
+				"projectId": "f540040aa9d643fb9aefcdd90d4c1190"
+			}, {
+				"projectStatus": "0",
+				"startBuildTime": "2017-05-16 16:36:47",
+				"periodName": "乌托邦一期",
+				"id": "412c2e040963448daba8a6088954f0d5",
+				"comId": "c5063df648e94c7d91e7668c7c6f538c",
+				"projectId": "6b24656cd315405cb2b45eb6fe8742ce"
+			}],
+			"parentId": "cacb6fb407c044818ef14097e833727e"
+		}, {
+			"name": "上海区域",
+			"id": "c5f2da8ff7854ea29a371f1f86e8b3a5",
+			"idTree": "cacb6fb407c044818ef14097e833727e>c5f2da8ff7854ea29a371f1f86e8b3a5",
+			"list": [{
+				"projectStatus": "0",
+				"startBuildTime": "2017-05-16 16:36:18",
+				"periodName": "科信科技大厦",
+				"id": "5ccc84c35ff84dce8ca20dfeaf634d91",
+				"comId": "c5f2da8ff7854ea29a371f1f86e8b3a5",
+				"projectId": "4c1b26dbbf5b4f678fca2ce9e29cb87f"
+			}],
+			"parentId": "cacb6fb407c044818ef14097e833727e"
+		}, {
+			"name": "广佛区域",
+			"id": "e4d77bce4def4d599c303825849ff1e2",
+			"idTree": "cacb6fb407c044818ef14097e833727e>e4d77bce4def4d599c303825849ff1e2",
+			"list": [{
+				"projectStatus": "0",
+				"startBuildTime": "2017-05-16 16:36:28",
+				"periodName": "科信科技大厦",
+				"id": "b5c8e322040642928a4b100646db23fe",
+				"comId": "e4d77bce4def4d599c303825849ff1e2",
+				"projectId": "4c1b26dbbf5b4f678fca2ce9e29cb87f"
+			}],
+			"parentId": "cacb6fb407c044818ef14097e833727e"
+		}],
+		"parentId": ""
+	}],
+	"msg": "操作成功"
+}

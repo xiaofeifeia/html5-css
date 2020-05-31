@@ -1,0 +1,246 @@
+{
+    "code": 0,
+    "data": [
+        {
+            "isSealed": "0",
+            "level": 1,
+            "updateUserId": "2",
+            "standardId": "b9d0ccdddabd43c2ae1850a41167b223",
+            "updateTime": "2018-09-13 14:14:46",
+            "idTree": "b28c8f26bb804b60ac8e14ddc3ac458d",
+            "list": [
+                {
+                    "isSealed": "0",
+                    "level": 2,
+                    "updateUserId": "2",
+                    "standardId": "b9d0ccdddabd43c2ae1850a41167b223",
+                    "updateTime": "2018-09-13 14:14:46",
+                    "idTree": "b28c8f26bb804b60ac8e14ddc3ac458d>f64a63d33dc34382b82e1957166fe1c2",
+                    "list": [
+                        {
+                            "isSealed": "0",
+                            "level": 3,
+                            "updateUserId": "2",
+                            "standardId": "b9d0ccdddabd43c2ae1850a41167b223",
+                            "updateTime": "2018-09-13 14:14:46",
+                            "idTree": "b28c8f26bb804b60ac8e14ddc3ac458d>f64a63d33dc34382b82e1957166fe1c2>47e66c17e28e4bb7a8ecaf259c81f6e4",
+                            "list": [
+                                {
+                                    "isSealed": "0",
+                                    "updateUserId": "2",
+                                    "procedureCode": "GD-C5-71172",
+                                    "minPassRatio": 0.8,
+                                    "standardId": "b9d0ccdddabd43c2ae1850a41167b223",
+                                    "procedureCategory": "0",
+                                    "updateTime": "2018-09-13 14:14:46",
+                                    "procedureTypeId": "47e66c17e28e4bb7a8ecaf259c81f6e4",
+                                    "isHide": 0,
+                                    "procedureName": "装配式结构预制构件",
+                                    "tenantId": "1",
+                                    "isMaterial": "0",
+                                    "id": "3c1427fa641b42868460761cf1e14135"
+                                },
+                                {
+                                    "isSealed": "0",
+                                    "updateUserId": "2",
+                                    "procedureCode": "GD-C5-71173",
+                                    "minPassRatio": 0.8,
+                                    "standardId": "b9d0ccdddabd43c2ae1850a41167b223",
+                                    "procedureCategory": "0",
+                                    "updateTime": "2018-09-13 14:14:46",
+                                    "procedureTypeId": "47e66c17e28e4bb7a8ecaf259c81f6e4",
+                                    "isHide": 0,
+                                    "procedureName": "装配式结构施工",
+                                    "tenantId": "1",
+                                    "isMaterial": "0",
+                                    "id": "83136bd8e56f424696f6cb81f983aa90"
+                                }
+                            ],
+                            "isLeaf": "1",
+                            "procedureTypeCategory": "0",
+                            "parentId": "f64a63d33dc34382b82e1957166fe1c2",
+                            "tenantId": "1",
+                            "id": "47e66c17e28e4bb7a8ecaf259c81f6e4",
+                            "nameTree": "主体结构>混凝土结构>装配式结构",
+                            "procedureTypeName": "装配式结构"
+                        },
+                        {
+                            "isSealed": "0",
+                            "level": 3,
+                            "updateUserId": "2",
+                            "standardId": "b9d0ccdddabd43c2ae1850a41167b223",
+                            "updateTime": "2018-09-13 14:14:46",
+                            "idTree": "b28c8f26bb804b60ac8e14ddc3ac458d>f64a63d33dc34382b82e1957166fe1c2>76cba85144e3499fab6d0b1c33711d01",
+                            "list": [
+                                {
+                                    "isSealed": "0",
+                                    "updateUserId": "2",
+                                    "procedureCode": "GD-C5-71170",
+                                    "minPassRatio": 0.8,
+                                    "standardId": "b9d0ccdddabd43c2ae1850a41167b223",
+                                    "procedureCategory": "0",
+                                    "updateTime": "2018-09-13 14:14:46",
+                                    "procedureTypeId": "76cba85144e3499fab6d0b1c33711d01",
+                                    "isHide": 0,
+                                    "procedureName": "现浇结构外观及尺寸偏差",
+                                    "tenantId": "1",
+                                    "isMaterial": "0",
+                                    "id": "d23a440168624649b5aa2186e021dac2"
+                                }
+                            ],
+                            "isLeaf": "1",
+                            "procedureTypeCategory": "0",
+                            "parentId": "f64a63d33dc34382b82e1957166fe1c2",
+                            "tenantId": "1",
+                            "id": "76cba85144e3499fab6d0b1c33711d01",
+                            "nameTree": "主体结构>混凝土结构>现浇结构",
+                            "procedureTypeName": "现浇结构"
+                        },
+                        {
+                            "isSealed": "0",
+                            "level": 3,
+                            "updateUserId": "2",
+                            "standardId": "b9d0ccdddabd43c2ae1850a41167b223",
+                            "updateTime": "2018-09-13 14:14:46",
+                            "idTree": "b28c8f26bb804b60ac8e14ddc3ac458d>f64a63d33dc34382b82e1957166fe1c2>9b2b570999ea4303a84612c77ca0863c",
+                            "list": [
+                                {
+                                    "isSealed": "0",
+                                    "updateUserId": "2",
+                                    "procedureCode": "GD-C5-71157",
+                                    "minPassRatio": 0.8,
+                                    "standardId": "b9d0ccdddabd43c2ae1850a41167b223",
+                                    "procedureCategory": "0",
+                                    "updateTime": "2018-09-13 14:14:46",
+                                    "procedureTypeId": "9b2b570999ea4303a84612c77ca0863c",
+                                    "isHide": 0,
+                                    "procedureName": "模板安装",
+                                    "tenantId": "1",
+                                    "isMaterial": "0",
+                                    "id": "8874077a18404cf69f9c3e0596cf65ca"
+                                }
+                            ],
+                            "isLeaf": "1",
+                            "procedureTypeCategory": "0",
+                            "parentId": "f64a63d33dc34382b82e1957166fe1c2",
+                            "tenantId": "1",
+                            "id": "9b2b570999ea4303a84612c77ca0863c",
+                            "nameTree": "主体结构>混凝土结构>模板",
+                            "procedureTypeName": "模板"
+                        },
+                        {
+                            "isSealed": "0",
+                            "level": 3,
+                            "updateUserId": "2",
+                            "standardId": "b9d0ccdddabd43c2ae1850a41167b223",
+                            "updateTime": "2018-09-13 14:14:46",
+                            "idTree": "b28c8f26bb804b60ac8e14ddc3ac458d>f64a63d33dc34382b82e1957166fe1c2>95beeaa8e13941dbbc391f929ced0f00",
+                            "list": [
+                                {
+                                    "isSealed": "0",
+                                    "updateUserId": "2",
+                                    "procedureCode": "GD-C5-71162",
+                                    "minPassRatio": 0.8,
+                                    "standardId": "b9d0ccdddabd43c2ae1850a41167b223",
+                                    "procedureCategory": "0",
+                                    "updateTime": "2018-09-13 14:14:46",
+                                    "procedureTypeId": "95beeaa8e13941dbbc391f929ced0f00",
+                                    "isHide": 0,
+                                    "procedureName": "钢筋安装（梁板）",
+                                    "tenantId": "1",
+                                    "isMaterial": "0",
+                                    "id": "995165fcedf542dab9928d07f0b9197e"
+                                },
+                                {
+                                    "isSealed": "0",
+                                    "updateUserId": "2",
+                                    "procedureCode": "GD-C5-71162_2",
+                                    "minPassRatio": 0.8,
+                                    "standardId": "b9d0ccdddabd43c2ae1850a41167b223",
+                                    "procedureCategory": "0",
+                                    "updateTime": "2018-09-13 14:14:46",
+                                    "procedureTypeId": "95beeaa8e13941dbbc391f929ced0f00",
+                                    "isHide": 0,
+                                    "procedureName": "钢筋安装（墙柱）",
+                                    "tenantId": "1",
+                                    "isMaterial": "0",
+                                    "id": "cf6eb69db529445ab2412093389edd69"
+                                }
+                            ],
+                            "isLeaf": "1",
+                            "procedureTypeCategory": "0",
+                            "parentId": "f64a63d33dc34382b82e1957166fe1c2",
+                            "tenantId": "1",
+                            "id": "95beeaa8e13941dbbc391f929ced0f00",
+                            "nameTree": "主体结构>混凝土结构>钢筋",
+                            "procedureTypeName": "钢筋"
+                        }
+                    ],
+                    "isLeaf": "0",
+                    "procedureTypeCategory": "0",
+                    "parentId": "b28c8f26bb804b60ac8e14ddc3ac458d",
+                    "tenantId": "1",
+                    "id": "f64a63d33dc34382b82e1957166fe1c2",
+                    "nameTree": "主体结构>混凝土结构",
+                    "procedureTypeName": "混凝土结构"
+                },
+                {
+                    "isSealed": "0",
+                    "level": 2,
+                    "updateUserId": "2",
+                    "standardId": "b9d0ccdddabd43c2ae1850a41167b223",
+                    "updateTime": "2018-09-13 14:14:46",
+                    "idTree": "b28c8f26bb804b60ac8e14ddc3ac458d>cad83264a2ac491783d773e5153c8804",
+                    "list": [
+                        {
+                            "isSealed": "0",
+                            "level": 3,
+                            "updateUserId": "2",
+                            "standardId": "b9d0ccdddabd43c2ae1850a41167b223",
+                            "updateTime": "2018-09-13 14:14:46",
+                            "idTree": "b28c8f26bb804b60ac8e14ddc3ac458d>cad83264a2ac491783d773e5153c8804>c3a4c3251ccd4e129a1130f5d250ebea",
+                            "list": [
+                                {
+                                    "isSealed": "0",
+                                    "updateUserId": "2",
+                                    "procedureCode": "GD-C5-71178",
+                                    "minPassRatio": 0.8,
+                                    "standardId": "b9d0ccdddabd43c2ae1850a41167b223",
+                                    "procedureCategory": "0",
+                                    "updateTime": "2018-09-13 14:14:46",
+                                    "procedureTypeId": "c3a4c3251ccd4e129a1130f5d250ebea",
+                                    "isHide": 0,
+                                    "procedureName": "填充墙砌体",
+                                    "tenantId": "1",
+                                    "isMaterial": "0",
+                                    "id": "6a1bc45b0d234e9c93c0a5ff87b4d87b"
+                                }
+                            ],
+                            "isLeaf": "1",
+                            "procedureTypeCategory": "0",
+                            "parentId": "cad83264a2ac491783d773e5153c8804",
+                            "tenantId": "1",
+                            "id": "c3a4c3251ccd4e129a1130f5d250ebea",
+                            "nameTree": "主体结构>砌体结构>填充墙砌体",
+                            "procedureTypeName": "填充墙砌体"
+                        }
+                    ],
+                    "isLeaf": "0",
+                    "procedureTypeCategory": "0",
+                    "parentId": "b28c8f26bb804b60ac8e14ddc3ac458d",
+                    "tenantId": "1",
+                    "id": "cad83264a2ac491783d773e5153c8804",
+                    "nameTree": "主体结构>砌体结构",
+                    "procedureTypeName": "砌体结构"
+                }
+            ],
+            "isLeaf": "0",
+            "procedureTypeCategory": "0",
+            "tenantId": "1",
+            "id": "b28c8f26bb804b60ac8e14ddc3ac458d",
+            "nameTree": "主体结构",
+            "procedureTypeName": "主体结构"
+        }
+    ],
+    "msg": "操作成功"
+}

@@ -1,0 +1,39 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+</head>
+<body>
+	<script src="jquery.min.js"></script>
+  <script type="text/javascript">
+  	  var newArray=[];
+
+  	   function treeDataRewrite(newArray,array){
+  	  	if(!array){
+  	  		return;
+  	  	}
+  	  	for(var i=0;i<array.length;i++){
+  	  		var obj={};
+  	  		for(var key in array[i]){
+  	  			if(key!=='list'){
+  	  				obj[key]=array[i][key];
+  	  			}
+  	  		}
+  	  		newArray.push(obj);
+  	  		if(array[i].list&&array[i].list.length>0){
+  	  			//console.log(array[i].list.length)
+  	  			treeDataRewrite(newArray,array[i].list);
+  	  		}
+  	  	}
+  	  }
+
+  	  $.getJSON("json1.json", function (map){
+         treeDataRewrite(newArray,map.data);
+         
+         for(var j=0;j<newArray.length;j++){
+         	console.log(newArray[j]);
+         }
+       });
+  </script>
+</body>
+</html>

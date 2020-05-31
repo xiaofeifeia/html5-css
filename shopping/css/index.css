@@ -1,0 +1,243 @@
+@font-face {
+    font-family: 'icomoon';
+    src: url('../fonts/icomoon.eot?vv6xsm');
+    src: url('../fonts/icomoon.eot?vv6xsm#iefix') format('embedded-opentype'), url('../fonts/icomoon.ttf?vv6xsm') format('truetype'), url('../fonts/icomoon.woff?vv6xsm') format('woff'), url('../fonts/icomoon.svg?vv6xsm#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+}
+
+.main {
+    width: 980px;
+    height: 455px;
+    margin-left: 220px;
+    margin-top: 10px;
+}
+
+.main .banner {
+    float: left;
+    width: 721px;
+    height: 455px;
+}
+
+.main .fast_get {
+    float: right;
+    width: 249px;
+    height: 455px;
+}
+
+.main .fast_get .news {
+    height: 164px;
+    border: 1px solid #666666;
+}
+
+.main .fast_get .news h3 {
+    height: 32px;
+    line-height: 32px;
+    font-size: 14px;
+    font-weight: 400;
+    padding-left: 10px;
+    color: #666666;
+    border-bottom: 1px solid #666666;
+}
+
+.main .fast_get .news h3 span {
+    float: right;
+    font-size: 12px;
+    margin-right: 30px;
+}
+
+.main .fast_get .news h3 ::after {
+    content: '\e905';
+    font-family: 'icomoon';
+}
+
+.main .fast_get .news ul li {
+    padding-left: 8px;
+    height: 25px;
+    line-height: 25px;
+    /* 超过宽度用...代替 */
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.main .fast_get .news ul span {
+    font-weight: bold;
+}
+
+.main .lifeservice {
+    height: 210px;
+    border-left: 1px solid #666666;
+}
+
+.main .lifeservice ul {
+    text-align: center;
+}
+
+.main .lifeservice ul li {
+    width: 62px;
+    height: 70px;
+    float: left;
+    border-right: 1px solid #666666;
+    border-bottom: 1px solid #666666;
+    text-align: center;
+}
+
+.main .lifeservice ul li i {
+    width: 24px;
+    height: 28px;
+    margin-top: 12px;
+    display: inline-block;
+    background: url(../images/icons.png) no-repeat -17px -16px;
+}
+
+.main .lifeservice ul li span {
+    display: block;
+}
+
+.main .bargain {
+    margin-top: 6px;
+}
+
+.recom {
+    width: 1202px;
+    height: 164px;
+    margin-top: 10px;
+    background-color: #ebebeb;
+}
+
+.recom .today_recom {
+    width: 206px;
+    height: 165px;
+    background: url(../upload/rec.png) no-repeat;
+    background-size: 206px 164px;
+    float: left;
+}
+
+.recom ul {
+    float: left;
+}
+
+.recom ul li {
+    float: left;
+    border-right: 1px solid #dddddd;
+}
+
+.recom_list {
+    height: 495px;
+    margin-top: 20px;
+}
+
+.recom_list .title {
+    height: 38px;
+    line-height: 38px;
+    border-bottom: 2px solid #c81623;
+}
+
+.recom_list .title h3 {
+    font-weight: 400;
+    font-size: 18px;
+    color: #c81623;
+    float: left;
+}
+
+.recom_list .title ul {
+    float: right;
+    margin-right: 10px;
+}
+
+.recom_list .title ul li {
+    float: left;
+}
+
+.recom_list .title ul li span {
+    padding: 0 15px;
+}
+
+.recom_list .recom_left {
+    width: 210px;
+    height: 362px;
+    float: left;
+    background-color: #f9f9f9;
+}
+
+.recom_list .recom_left ul {
+    height: 100px;
+}
+
+.recom_list .recom_left ul li {
+    width: 90px;
+    height: 32px;
+    float: left;
+    border-bottom: 1px solid #d9d3d3;
+    margin-left: 12px;
+    text-align: center;
+    line-height: 32px;
+    font-size: 12px;
+}
+
+.recom_list .recom_left img {
+    width: 187px;
+    height: 227px;
+    margin: 10px 10px;
+}
+
+.recom_list .recom_mido {
+    width: 329px;
+    height: 362px;
+    float: left;
+}
+
+.recom_list .recom_mido img {
+    width: 329px;
+    height: 362px;
+}
+
+.recom_list .recom_right {
+    width: 661px;
+    height: 362px;
+    float: left;
+    background-color: #fff;
+}
+
+.recom_list .recom_right ul {
+    text-align: center;
+    border: 1px solid #666666;
+    border-top: none;
+}
+
+.recom_list .recom_right ul li img {
+    padding-bottom: 5px;
+}
+
+.recom_list .recom_right ul li {
+    width: 219px;
+    height: 181px;
+    float: left;
+    border-bottom: 1px solid #ededed;
+}
+
+.recom_list .recom_right ul li:nth-child(2) {
+    background-color: #fff;
+    padding-top: 65px;
+    border-right: 1px solid #ededed;
+    border-left: 1px solid #ededed;
+    border-bottom: none;
+}
+
+.recom_list .recom_right ul li:nth-child(5) {
+    background-color: #fff;
+    padding-top: 20px;
+    border-right: 1px solid #ededed;
+    border-left: 1px solid #ededed;
+    border-bottom: 1px solid #ededed;
+}
+
+.recom_list .brand {
+    height: 65px;
+}
+
+.recom_list .brand img {
+    margin-top: 15px;
+}
